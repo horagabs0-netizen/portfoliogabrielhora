@@ -1,0 +1,1164 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Gabriel Hora | Portfólio de design gráfico e pixel art</title>
+<meta name="description" content="Portfólio de Gabriel Hora: design gráfico e pixel art (personagens, cenários, tilesets e animações). Vencedor de game jam como responsável pela arte.">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Gabriel Hora | Portfólio de design gráfico e pixel art">
+<meta property="og:description" content="Portfólio de Gabriel Hora: design gráfico e pixel art (personagens, cenários, tilesets e animações). Vencedor de game jam como responsável pela arte.">
+<meta property="og:locale" content="pt_BR">
+<meta name="theme-color" content="#141512">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Crect width='8' height='8' fill='%23141512'/%3E%3Crect x='1' y='1' width='2' height='6' fill='%23C8942F'/%3E%3Crect x='5' y='1' width='2' height='6' fill='%23C8942F'/%3E%3Crect x='3' y='3' width='2' height='2' fill='%23C8942F'/%3E%3C/svg%3E">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Gabriel Hora", "jobTitle": "Designer gráfico e pixel artist", "description": "Portfólio de Gabriel Hora: design gráfico e pixel art (personagens, cenários, tilesets e animações). Vencedor de game jam como responsável pela arte."}</script>
+<style>
+html{color-scheme:light}
+body{margin:0;font:14px system-ui,sans-serif}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=DM+Sans:wght@400;500;700&family=Pixelify+Sans:wght@400..700&family=Silkscreen:wght@400;700&display=swap">
+<style>
+:root{
+  /* Layout: tela dividida em dois mundos. Passar o mouse expande um lado, clicar entra na seção (#design ou #pixel). */
+  --ink:#141512;
+  --paper:#eadfc3;
+  --paper-2:#d9c9a0;
+  --red:#A76908;
+  --blue:#7D7135;
+  --yellow:#C8942F;
+  --px-bg:#141512;
+  --px-bg2:#201f17;
+  --px-line:#4a4524;
+  --px-green:#C8942F;
+  --px-pink:#A76908;
+  --px-text:#efe6cf;
+  --f-display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --f-body:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-pixel:"Silkscreen","Pixelify Sans","Trebuchet MS",sans-serif;
+  --f-mono:"Pixelify Sans","Trebuchet MS",Verdana,sans-serif;
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.5}
+body[data-view="pixel"]{background:var(--px-bg);color:var(--px-text)}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+body[data-view="pixel"] :focus-visible,.w-pixel:focus-visible,.modal.px :focus-visible{outline-color:var(--px-green)}
+.in{width:100%;max-width:1100px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+/* ---------- Início ---------- */
+.home{position:relative;display:flex;flex-direction:column;height:100vh;height:calc(100svh - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px));min-height:560px}
+.world{position:relative;flex:1 1 0;min-width:0;min-height:0;display:block;border:0;padding:0;text-align:left;overflow:hidden;transition:flex-grow .7s cubic-bezier(.2,.8,.2,1)}
+.world canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.w-design{background:var(--paper);color:var(--ink)}
+.w-pixel{background:var(--px-bg);color:var(--px-text)}
+.w-pixel canvas{image-rendering:pixelated}
+.world .txt{position:absolute;left:0;right:0;bottom:0;display:block;padding-block:24px 28px;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.world .big{display:block}
+.w-design .big{font-family:var(--f-display);font-weight:800;font-size:clamp(44px,9vw,120px);line-height:.88;letter-spacing:-.035em}
+.w-pixel .big{font-family:var(--f-pixel);font-weight:700;font-size:clamp(22px,4vw,46px);line-height:1.15;color:var(--px-green);text-shadow:3px 3px 0 var(--px-pink)}
+.world .sub{display:block;margin-top:14px;max-width:34ch}
+.w-design .sub{font-size:17px}
+.w-pixel .sub{font-family:var(--f-mono);font-size:20px;line-height:1.3}
+.world .go{display:inline-block;margin-top:14px;font-weight:700;border-bottom:3px solid currentColor;padding-bottom:2px;transition:letter-spacing .3s}
+.w-pixel .go{font-family:var(--f-mono);font-size:20px;border-bottom-style:dashed}
+.world:hover .go,.world:focus-visible .go{letter-spacing:.06em}
+.pill{position:absolute;z-index:3;left:50%;top:14px;transform:translateX(-50%);background:var(--ink);color:var(--paper);font-family:var(--f-display);font-weight:700;font-size:14px;letter-spacing:.04em;padding:8px 14px;border-radius:2px;white-space:nowrap;pointer-events:none;box-shadow:0 0 0 2px var(--paper)}
+@media (min-width:760px){
+  .home{flex-direction:row}
+}
+@media (min-width:760px) and (hover:hover){
+  .world:hover,.world:focus-visible{flex-grow:1.55}
+}
+
+/* ---------- Seções ---------- */
+.view{padding-block:20px 72px}
+.view.fade,.home.fade{animation:fadein .35s ease}
+@keyframes fadein{from{opacity:0}to{opacity:1}}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding-block:8px 32px}
+.nav{background:transparent;border:2px solid currentColor;padding:8px 14px;font-weight:700;border-radius:2px}
+.nav:hover{background:var(--ink);color:var(--paper)}
+.v-pixel .nav{font-family:var(--f-mono);font-size:18px;padding:4px 12px;line-height:1.2}
+.v-pixel .nav:hover{background:var(--px-green);color:var(--px-bg);border-color:var(--px-green)}
+.bar-name{font-family:var(--f-display);font-weight:700;letter-spacing:.04em;font-size:14px}
+.v-pixel .bar-name{font-family:var(--f-mono);font-size:18px}
+h3.sec{font-family:var(--f-display);font-weight:800;font-size:clamp(26px,4vw,38px);letter-spacing:-.02em;line-height:1.05;margin:64px 0 18px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.chip{font-family:var(--f-body);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border:2px solid currentColor;padding:2px 8px;border-radius:2px;opacity:.75}
+.v-pixel h3.sec{font-family:var(--f-pixel);font-weight:700;font-size:clamp(17px,2.8vw,24px);line-height:1.3;color:var(--px-green)}
+.lead{font-size:19px;max-width:56ch;margin:20px 0 0}
+
+/* Design gráfico */
+.d-title{font-family:var(--f-display);font-weight:800;font-size:clamp(60px,14vw,168px);line-height:.84;letter-spacing:-.045em;margin:0;text-wrap:balance}
+.stripe{display:flex;gap:0;height:14px;max-width:260px;margin-top:22px}
+.stripe i{flex:1;display:block}
+.stripe i:nth-child(1){background:var(--red)}
+.stripe i:nth-child(2){background:var(--blue)}
+.stripe i:nth-child(3){background:var(--yellow)}
+.lab{display:grid;grid-template-columns:minmax(0,420px) minmax(0,1fr);gap:40px;align-items:start}
+.poster-wrap{border:2px solid var(--ink);box-shadow:8px 8px 0 var(--blue);background:var(--paper);touch-action:pan-y}
+.poster-wrap svg{display:block;width:100%;height:auto}
+.poster-wrap .ly{transition:transform .18s ease-out}
+.ctrls{display:flex;flex-direction:column;gap:20px;min-width:0}
+.ctrls label,.ctrls legend{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:8px;padding:0}
+.ctrls fieldset{border:0;padding:0;margin:0;min-width:0}
+.ctrls input[type=text]{width:100%;font:inherit;font-family:var(--f-display);font-weight:800;font-size:28px;padding:10px 12px;border:2px solid var(--ink);background:#fff;color:var(--ink);border-radius:2px;letter-spacing:-.02em}
+.pal{display:flex;gap:12px;flex-wrap:wrap}
+.pal button{width:56px;height:56px;border:2px solid var(--ink);padding:0;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;background:none;border-radius:2px}
+.pal button[aria-pressed="true"]{box-shadow:0 0 0 3px var(--paper),0 0 0 6px var(--ink)}
+.pal span{display:block}
+.seg{display:flex;flex-wrap:wrap;gap:8px}
+.seg button{border:2px solid var(--ink);background:transparent;padding:8px 14px;font-weight:700;border-radius:2px}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.solid{align-self:flex-start;background:var(--red);color:#fff;border:2px solid var(--ink);padding:12px 22px;font-weight:800;font-size:17px;box-shadow:5px 5px 0 var(--ink);border-radius:2px;transition:transform .12s,box-shadow .12s}
+.solid:hover{transform:translate(2px,2px);box-shadow:3px 3px 0 var(--ink)}
+.solid:active{transform:translate(5px,5px);box-shadow:0 0 0 var(--ink)}
+.note{font-size:15px;opacity:.75;margin:0;max-width:44ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));gap:22px}
+.card{display:block;width:100%;text-align:left;background:#fff;border:2px solid var(--ink);padding:0;border-radius:2px;transition:transform .15s,box-shadow .15s;min-width:0}
+.card:hover,.card:focus-visible{transform:translate(-3px,-3px);box-shadow:6px 6px 0 var(--ink)}
+.card svg{display:block;width:100%;height:auto;border-bottom:2px solid var(--ink)}
+.card .c-t{display:block;padding:12px 14px 0;font-family:var(--f-display);font-weight:800;font-size:20px;letter-spacing:-.01em}
+.card .c-m{display:block;padding:0 14px 14px;font-size:14px;opacity:.7}
+
+/* Pixel art */
+.px-title{font-family:var(--f-pixel);font-weight:700;font-size:clamp(34px,8.6vw,88px);line-height:1.1;margin:0;color:var(--px-green);text-shadow:5px 5px 0 var(--px-pink);word-break:break-word}
+.v-pixel .lead{font-family:var(--f-mono);font-size:22px;line-height:1.3;max-width:46ch}
+.hud{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-family:var(--f-pixel);font-size:13px;line-height:1.5;margin-bottom:12px;color:var(--px-text)}
+.hud .coins{color:#E0B04A}
+.stage{outline:none}
+.stage canvas{display:block;width:100%;aspect-ratio:16/9;image-rendering:pixelated;border:4px solid var(--px-line);background:var(--px-bg)}
+.stage:focus-visible canvas{border-color:var(--px-green)}
+.pad{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap;align-items:center}
+.pad button{font-family:var(--f-mono);font-size:22px;line-height:1;background:var(--px-bg2);color:var(--px-text);border:3px solid var(--px-line);padding:10px 20px;min-width:64px;touch-action:none;user-select:none;-webkit-user-select:none;border-radius:2px}
+.pad button:active{background:var(--px-line)}
+.pad .sp{flex:1}
+.pad .rs{font-size:18px;padding:10px 14px}
+.keys{font-family:var(--f-mono);font-size:18px;margin:10px 0 0;opacity:.8}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr));gap:18px}
+.pcard{display:block;width:100%;text-align:left;background:var(--px-bg2);border:3px solid var(--px-line);padding:12px;min-width:0;border-radius:2px;transition:transform .12s,border-color .12s}
+.pcard:hover,.pcard:focus-visible{border-color:var(--px-green);transform:translateY(-4px)}
+.pcard canvas{display:block;width:100%;aspect-ratio:1;image-rendering:pixelated}
+.pcard .c-t{display:block;font-family:var(--f-pixel);font-size:11px;line-height:1.6;margin-top:12px;color:var(--px-text)}
+.pcard .c-m{display:block;font-family:var(--f-mono);font-size:18px;line-height:1.3;margin-top:4px;color:var(--px-pink)}
+.editor{display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:32px;align-items:start}
+.ed-cv{position:relative;width:100%;max-width:360px}
+.ed-cv canvas{display:block;width:100%;aspect-ratio:1;image-rendering:pixelated;border:4px solid var(--px-line);touch-action:none;cursor:crosshair;background:conic-gradient(#2e2c1c 25%,#201f17 0 50%,#2e2c1c 0 75%,#201f17 0) 0 0/12.5% 12.5%}
+.ed-cv::after{content:"";position:absolute;inset:4px;pointer-events:none;background-image:linear-gradient(to right,rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,.08) 1px,transparent 1px);background-size:6.25% 6.25%}
+.ed-side{display:flex;flex-direction:column;gap:18px;min-width:0}
+.swatches{display:flex;gap:8px;flex-wrap:wrap}
+.swatches button{width:40px;height:40px;border:3px solid var(--px-line);padding:0;border-radius:2px;font-family:var(--f-mono);font-size:18px;line-height:1;color:var(--px-text);background:var(--px-bg2)}
+.swatches button[aria-pressed="true"]{border-color:#fff;box-shadow:0 0 0 3px var(--px-bg),0 0 0 6px var(--px-green)}
+.ed-btns{display:flex;gap:10px;flex-wrap:wrap}
+.ed-btns button{font-family:var(--f-mono);font-size:18px;line-height:1.3;background:var(--px-bg2);color:var(--px-text);border:3px solid var(--px-line);padding:6px 14px;border-radius:2px}
+.ed-btns button[aria-pressed="true"]{border-color:var(--px-green);color:var(--px-green)}
+.ed-prev{display:flex;align-items:flex-end;gap:16px;font-family:var(--f-mono);font-size:18px}
+.ed-prev canvas{image-rendering:pixelated;background:var(--px-bg2);border:2px solid var(--px-line);display:block}
+#pv1{width:16px;height:16px}
+#pv4{width:64px;height:64px}
+
+/* Game jam */
+.jam{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,300px);align-items:center;min-height:260px;margin-top:32px;border:4px solid var(--px-line);overflow:hidden;color:var(--px-text);text-decoration:none;transition:border-color .15s}
+.jam:hover,.jam:focus-visible{border-color:var(--px-green)}
+.jam canvas{position:absolute;inset:0;width:100%;height:100%;display:block;image-rendering:pixelated}
+.jam-t{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:10px;justify-content:flex-end;min-height:260px;padding:28px 24px}
+.jam-badge{font-family:var(--f-mono);font-size:18px;line-height:1.3;background:var(--px-green);color:var(--px-bg);padding:2px 10px}
+.jam-name{font-family:var(--f-pixel);font-weight:700;font-size:clamp(26px,6.6vw,58px);line-height:1.15;color:var(--px-green);text-shadow:4px 4px 0 var(--px-pink);word-break:break-word}
+.jam-role{font-family:var(--f-mono);font-size:22px;line-height:1.3}
+.jam-cover{position:relative;display:block;width:100%;height:auto;margin:20px 20px 20px 0;border:4px solid var(--px-line);aspect-ratio:1080/1350;object-fit:cover}
+@media (max-width:760px){.jam{grid-template-columns:minmax(0,1fr)}.jam-cover{order:-1;max-width:260px;margin:20px 20px 0}.jam-t{min-height:0}}
+.jam-go{font-family:var(--f-mono);font-size:20px;line-height:1.3;border-bottom:3px dashed currentColor}
+/* Galeria */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.filters button{font-family:var(--f-mono);font-size:18px;line-height:1.3;background:var(--px-bg2);color:var(--px-text);border:3px solid var(--px-line);padding:4px 14px;border-radius:2px}
+.filters button[aria-pressed="true"]{background:var(--px-green);color:var(--px-bg);border-color:var(--px-green)}
+.gal{columns:3 240px;column-gap:18px}
+.gitem{display:block;width:100%;break-inside:avoid;margin:0 0 18px;padding:10px;text-align:left;background:var(--px-bg2);color:var(--px-text);border:3px solid var(--px-line);border-radius:2px;transition:transform .12s,border-color .12s}
+.gitem:hover,.gitem:focus-visible{border-color:var(--px-green);transform:translateY(-4px)}
+.gitem img{display:block;width:100%;height:auto;image-rendering:pixelated;background:#0d0d0b}
+.gcap{display:block;font-family:var(--f-pixel);font-weight:700;font-size:14px;line-height:1.3;margin-top:10px}
+.gmeta{display:block;font-family:var(--f-mono);font-size:18px;line-height:1.3;margin-top:2px;color:var(--px-green)}
+/* Comparador */
+.cmp-row{display:grid;grid-template-columns:minmax(0,520px) minmax(0,1fr);gap:32px;align-items:center}
+.cmp{position:relative;width:100%;aspect-ratio:532/560;border:4px solid var(--px-line);overflow:hidden;background:#848282}
+.cmp:focus-within{border-color:var(--px-green)}
+.cmp img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;image-rendering:pixelated;display:block;max-width:none}
+.cmp-line{position:absolute;top:0;bottom:0;width:4px;margin-left:-2px;background:var(--px-green);pointer-events:none}
+.cmp-tag{position:absolute;bottom:8px;font-family:var(--f-mono);font-size:18px;line-height:1.2;background:var(--px-bg);color:var(--px-text);padding:0 8px;pointer-events:none}
+.cmp input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize}
+/* Janela com imagem */
+.modal.stack .m-panel{grid-template-columns:minmax(0,1fr);max-width:min(960px,100%)}
+.m-media img{display:block;width:100%;max-height:62vh;object-fit:contain;image-rendering:pixelated;background:#0d0d0b}
+.m-nav{display:flex;gap:10px;flex-wrap:wrap}
+.m-nav button{font-family:var(--f-mono);font-size:18px;line-height:1.3;background:transparent;color:inherit;border:3px solid var(--px-line);padding:4px 14px;border-radius:2px}
+.m-nav button:hover{border-color:var(--px-green)}
+@media (max-width:760px){.cmp-row{grid-template-columns:minmax(0,1fr);gap:20px}}
+
+.v-pixel .c-row code{font-family:var(--f-mono);font-weight:400;font-size:20px}
+/* Feed de projetos */
+.feed{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:28px;align-items:start}
+.post{min-width:0;background:#f6edd3;border:2px solid var(--ink);border-radius:2px;display:flex;flex-direction:column}
+.post-h{display:flex;align-items:center;gap:12px;padding:12px 14px}
+.av{flex:none;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:var(--paper);font-weight:700;font-size:13px;letter-spacing:.04em;box-shadow:0 0 0 2px #f6edd3,0 0 0 4px var(--yellow)}
+.who{display:flex;flex-direction:column;min-width:0;line-height:1.25}
+.who b{font-size:14px}
+.who .sub{font-size:12px;opacity:.75}
+.media{position:relative;aspect-ratio:4/5;background:var(--ink);overflow:hidden;border-block:2px solid var(--ink)}
+.track{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}
+.track::-webkit-scrollbar{display:none}
+.slide{position:relative;flex:0 0 100%;height:100%;padding:0;border:0;background:var(--ink);scroll-snap-align:center;display:block;overflow:hidden;cursor:zoom-in}
+.slide img{position:absolute;inset:0;width:100%;height:100%;max-width:none;display:block}
+.slide .bg{object-fit:cover;filter:blur(22px) brightness(.75);transform:scale(1.15)}
+.slide .fg{object-fit:contain}
+.count{position:absolute;top:10px;right:10px;background:rgba(20,21,18,.72);color:#fff;font-size:12px;font-weight:700;padding:2px 9px;border-radius:99px;pointer-events:none;font-variant-numeric:tabular-nums}
+.cb{position:absolute;top:50%;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;border:0;background:rgba(246,237,211,.95);color:var(--ink);display:grid;place-items:center;padding:0;box-shadow:0 1px 5px rgba(0,0,0,.4)}
+.cb:hover{background:#fff}
+.cb.prev{left:8px}
+.cb.next{right:8px}
+.cb svg,.ic svg{width:20px;height:20px;display:block;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.post-a{position:relative;display:flex;align-items:center;padding:8px 10px;min-height:48px}
+.ic{background:transparent;border:0;padding:6px;color:var(--ink);display:grid;border-radius:2px}
+.ic svg{width:24px;height:24px}
+.ic[aria-pressed="true"] svg{fill:var(--red);stroke:var(--red)}
+.ic.sv{margin-left:auto}
+.dots{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;gap:2px}
+.dots button{width:14px;height:20px;border:0;padding:0;background:transparent;display:grid;place-items:center}
+.dots button::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--ink);opacity:.25}
+.dots button[aria-current="true"]::before{opacity:1;background:var(--red)}
+.cap{margin:0;padding:0 14px 16px;font-size:14px;line-height:1.45}
+.cap b{margin-right:6px}
+.modal.dz .m-media img{image-rendering:auto;background:var(--ink)}
+/* Idioma */
+.lang{position:fixed;z-index:40;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));display:flex;border:2px solid var(--ink);background:var(--paper);box-shadow:3px 3px 0 var(--ink);border-radius:2px}
+.lang button{background:transparent;border:0;padding:6px 12px;font-family:var(--f-body);font-weight:700;font-size:14px;letter-spacing:.06em;color:var(--ink)}
+.lang button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+body[data-view="pixel"] .lang{border-color:var(--px-green);background:var(--px-bg);box-shadow:3px 3px 0 var(--px-line)}
+body[data-view="pixel"] .lang button{color:var(--px-text)}
+body[data-view="pixel"] .lang button[aria-pressed="true"]{background:var(--px-green);color:var(--px-bg)}
+.gal-cta{margin:18px 0 0}
+.gal-link{display:inline-block;text-align:left;background:transparent;border:0;padding:0 0 4px;font-family:var(--f-mono);font-size:20px;line-height:1.3;color:var(--px-green);border-bottom:3px dashed var(--px-green);max-width:46ch}
+.gal-link:hover{color:var(--px-text);border-bottom-color:var(--px-text)}
+#gal-sec{scroll-margin-top:16px}
+/* Contato */
+.contact{margin-top:72px;padding-top:28px;border-top:3px solid currentColor;display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.contact p{margin:0;font-family:var(--f-display);font-weight:800;font-size:clamp(24px,4vw,40px);letter-spacing:-.02em;line-height:1.05}
+.v-pixel .contact p{font-family:var(--f-pixel);font-weight:700;font-size:clamp(15px,2.6vw,22px);line-height:1.4}
+.c-col{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.c-row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.c-row code{font-family:var(--f-body);font-weight:500;font-size:17px;border:2px dashed currentColor;padding:2px 10px;user-select:all;word-break:break-all}
+.copy{background:transparent;border:2px solid currentColor;padding:6px 14px;font-weight:700;border-radius:2px}
+.v-pixel .copy{font-family:var(--f-mono);font-size:18px;padding:2px 12px}
+
+/* Janela de projeto */
+.modal{position:fixed;inset:0;z-index:50;display:flex;align-items:center;justify-content:center;background:rgba(20,21,18,.82);padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.m-panel{position:relative;width:100%;max-width:760px;max-height:100%;overflow:auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0}
+.modal.dz .m-panel{background:var(--paper);color:var(--ink);border:3px solid var(--ink);box-shadow:10px 10px 0 var(--ink)}
+.modal.px .m-panel{background:var(--px-bg2);color:var(--px-text);border:4px solid var(--px-green)}
+.m-media{min-width:0}
+.m-media svg{display:block;width:100%;height:100%;object-fit:cover}
+.m-media canvas{display:block;width:100%;aspect-ratio:1;image-rendering:pixelated}
+.m-text{padding:28px 24px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.m-text h3{margin:0;font-family:var(--f-display);font-weight:800;font-size:30px;line-height:1.05;letter-spacing:-.02em}
+.modal.px .m-text h3{font-family:var(--f-pixel);font-weight:700;font-size:20px;line-height:1.3;color:var(--px-green)}
+.m-meta{margin:0;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:.7}
+.modal.px .m-meta{font-family:var(--f-mono);font-size:18px;letter-spacing:0;text-transform:none;color:var(--px-green);opacity:1}
+.m-text p#m-body{margin:0}
+.modal.px #m-body{font-family:var(--f-mono);font-size:20px;line-height:1.3}
+.m-go{align-self:flex-start;margin-top:auto;background:var(--ink);color:var(--paper);border:0;padding:10px 20px;font-weight:700;border-radius:2px}
+.modal.px .m-go{background:var(--px-green);color:var(--px-bg);font-family:var(--f-mono);font-size:20px;padding:4px 18px}
+.m-x{position:absolute;top:8px;right:8px;z-index:2;width:40px;height:40px;border:2px solid currentColor;background:var(--paper);color:var(--ink);font-size:26px;line-height:1;padding:0;border-radius:2px}
+.modal.px .m-x{background:var(--px-bg);color:var(--px-text)}
+
+@media (max-width:760px){
+  .lab,.editor{grid-template-columns:minmax(0,1fr);gap:28px}
+  .poster-wrap{max-width:420px}
+  .m-panel{grid-template-columns:minmax(0,1fr)}
+  .m-media svg{height:auto}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+<div id="app">
+
+<main id="home" class="home" aria-label="Escolha uma seção">
+  <button class="world w-design" data-go="design" aria-label="Entrar em Design gráfico">
+    <canvas id="cv-design" aria-hidden="true"></canvas>
+    <span class="txt">
+      <span class="big">Design<br>gráfico</span>
+      <span class="sub">Marcas, cartazes e peças editoriais.</span>
+      <span class="go">Entrar →</span>
+    </span>
+  </button>
+  <button class="world w-pixel" data-go="pixel" aria-label="Entrar em Game design e pixel art">
+    <canvas id="cv-pixel" aria-hidden="true"></canvas>
+    <span class="txt">
+      <span class="big">Game design<br>&amp; pixel art</span>
+      <span class="sub">Sprites, cenários e protótipos de jogo.</span>
+      <span class="go">Jogar →</span>
+    </span>
+  </button>
+  <div class="pill">Gabriel Hora · portfólio</div>
+</main>
+
+<section id="design" class="view v-design" hidden>
+  <div class="in">
+    <div class="bar">
+      <button class="nav" data-go="home">← Início</button>
+      <span class="bar-name">Gabriel Hora</span>
+      <button class="nav" data-go="pixel">Pixel art →</button>
+    </div>
+    <h2 class="d-title">Design<br>gráfico</h2>
+    <div class="stripe" aria-hidden="true"><i></i><i></i><i></i></div>
+    <p class="lead">Identidade visual, cartazes e peças editoriais. Monte um cartaz aqui embaixo e depois veja os projetos.</p>
+
+    <h3 class="sec">Cartaz ao vivo</h3>
+    <div class="lab">
+      <div class="poster-wrap" id="pw"><svg id="poster" viewBox="0 0 300 400" role="img" aria-label="Cartaz gerado na página"></svg></div>
+      <div class="ctrls">
+        <div>
+          <label for="pm-text">Título do cartaz</label>
+          <input id="pm-text" type="text" maxlength="24" value="Forma e cor" autocomplete="off">
+        </div>
+        <fieldset><legend>Paleta</legend><div class="pal" id="pm-pal" data-dyn></div></fieldset>
+        <fieldset><legend>Composição</legend><div class="seg" id="pm-lay" data-dyn></div></fieldset>
+        <button class="solid" id="pm-shuffle" type="button">Embaralhar</button>
+        <p class="note">Passe o cursor sobre o cartaz. As camadas se movem em profundidades diferentes.</p>
+      </div>
+    </div>
+
+    <h3 class="sec">Projetos</h3>
+    <div class="feed" id="feed" data-dyn></div>
+
+    <footer class="contact">
+      <p>Vamos conversar?</p>
+      <div class="c-col"><div class="c-row"><code id="mail-d">horagabs0@gmail.com</code><button class="copy" data-dyn type="button" data-mail="mail-d">Copiar</button></div><div class="c-row"><code id="tel-d">(11) 98489-2813</code><button class="copy" data-dyn type="button" data-mail="tel-d">Copiar</button></div></div>
+    </footer>
+  </div>
+</section>
+
+<section id="pixel" class="view v-pixel" hidden>
+  <div class="in">
+    <div class="bar">
+      <button class="nav" data-go="home">← Início</button>
+      <span class="bar-name">Gabriel Hora</span>
+      <button class="nav" data-go="design">Design gráfico →</button>
+    </div>
+    <h2 class="px-title">Pixel<br>art</h2>
+    <p class="lead">Artista apaixonado por pixel art e criação de universos visuais. Desenvolvo personagens, cenários, tilesets e animações, explorando cores, formas e movimentos para dar vida a novas ideias e histórias, pixel por pixel.</p>
+    <p class="gal-cta"><button class="gal-link" type="button" data-to="gal-sec">Explore meus projetos e conheça um pouco do meu universo criativo através do pixel art.<span aria-hidden="true"> ↓</span></button></p>
+
+    <a class="jam" href="https://gabrielbazaga.itch.io/firefly-path" target="_blank" rel="noopener">
+      <canvas id="jam-cv" aria-hidden="true"></canvas>
+      <span class="jam-t">
+        <span class="jam-badge">Game jam · equipe vencedora</span>
+        <span class="jam-name">Firefly's Path</span>
+        <span class="jam-role">Responsável pela arte</span>
+        <span class="jam-go">Jogar no itch.io ↗</span>
+      </span>
+      <img class="jam-cover" src="img/firefly-capa.jpg" alt="Capa do jogo Firefly's Path: uma criatura redonda e luminosa numa floresta escura, cercada de vaga-lumes" width="1080" height="1350">
+    </a>
+
+    <h3 class="sec">Fase interativa</h3>
+    <div class="hud" data-dyn><span class="coins" id="coins">MOEDAS 0/4</span><span id="msg">ANDE ATÉ A PRIMEIRA MOEDA</span></div>
+    <div class="stage" id="stage" tabindex="0" aria-label="Jogo: use as setas ou A e D para andar, espaço para pular">
+      <canvas id="game" width="160" height="90"></canvas>
+    </div>
+    <div class="pad">
+      <button type="button" data-k="l" aria-label="Andar para a esquerda">◀</button>
+      <button type="button" data-k="r" aria-label="Andar para a direita">▶</button>
+      <button type="button" data-k="j" aria-label="Pular">PULAR</button>
+      <span class="sp"></span>
+      <button type="button" class="rs" id="again">Reiniciar</button>
+    </div>
+    <p class="keys">Teclado: setas ou A / D para andar, espaço ou ↑ para pular.</p>
+
+    <h3 class="sec" id="gal-sec">Galeria de estudos</h3>
+    <div class="filters" id="g-filters" data-dyn role="group" aria-label="Filtrar por tipo"></div>
+    <div class="gal" id="gal" data-dyn></div>
+
+    <h3 class="sec">Do traço à cor</h3>
+    <div class="cmp-row">
+      <div class="cmp" id="cmp">
+        <img src="img/estacao-final.webp" alt="Estação em pixel art, arte final com cores" width="532" height="560">
+        <img id="cmp-top" src="img/estacao-linha.webp" alt="Estação em pixel art, apenas o desenho de linhas" width="1330" height="1400">
+        <span class="cmp-line" id="cmp-line"></span>
+        <span class="cmp-tag" style="left:8px">Linhas</span>
+        <span class="cmp-tag" style="right:8px">Arte final</span>
+        <input id="cmp-r" type="range" min="0" max="100" value="50" aria-label="Comparar o desenho de linhas com a arte final">
+      </div>
+      <p class="lead">Arraste para ver o desenho de linhas da estação virar arte final.</p>
+    </div>
+
+    <h3 class="sec">Editor de sprite 16×16</h3>
+    <div class="editor">
+      <div class="ed-cv"><canvas id="ed" width="16" height="16" aria-label="Área de desenho 16 por 16"></canvas></div>
+      <div class="ed-side">
+        <div class="swatches" id="sw" data-dyn role="group" aria-label="Cores"></div>
+        <div class="ed-btns">
+          <button type="button" id="ed-sym" data-dyn aria-pressed="true">Simetria: ligada</button>
+          <button type="button" id="ed-flip">Espelhar</button>
+          <button type="button" id="ed-clear">Limpar</button>
+        </div>
+        <div class="ed-prev"><canvas id="pv1" width="16" height="16"></canvas><canvas id="pv4" width="16" height="16"></canvas><span>1× e 4×</span></div>
+      </div>
+    </div>
+
+    <footer class="contact">
+      <p>Vamos jogar juntos?</p>
+      <div class="c-col"><div class="c-row"><code id="mail-p">horagabs0@gmail.com</code><button class="copy" data-dyn type="button" data-mail="mail-p">Copiar</button></div><div class="c-row"><code id="tel-p">(11) 98489-2813</code><button class="copy" data-dyn type="button" data-mail="tel-p">Copiar</button></div></div>
+    </footer>
+  </div>
+</section>
+
+<div class="lang" role="group" aria-label="Idioma / Language">
+  <button type="button" data-lang="pt" aria-pressed="true">PT</button>
+  <button type="button" data-lang="en" aria-pressed="false">EN</button>
+</div>
+
+<div id="modal" class="modal dz" hidden role="dialog" aria-modal="true" aria-labelledby="m-title">
+  <div class="m-panel">
+    <button class="m-x" id="m-x" type="button" aria-label="Fechar">×</button>
+    <div class="m-media" id="m-media"></div>
+    <div class="m-text">
+      <p class="m-meta" id="m-meta" data-dyn></p>
+      <h3 id="m-title" data-dyn></h3>
+      <p id="m-body" data-dyn></p>
+      <div class="m-nav" id="m-nav" hidden>
+        <button type="button" id="m-prev">← Anterior</button>
+        <button type="button" id="m-next">Próxima →</button>
+      </div>
+      <button class="m-go" id="m-ok" type="button">Continuar</button>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<script>
+(function(){
+'use strict';
+
+/* ---------- utilidades ---------- */
+const $=(s,r=document)=>r.querySelector(s);
+const $$=(s,r=document)=>Array.from(r.querySelectorAll(s));
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function rng(seed){let a=seed>>>0;return function(){a=(a+0x6D2B79F5)|0;let t=Math.imul(a^(a>>>15),1|a);t=(t+Math.imul(t^(t>>>7),61|t))^t;return((t^(t>>>14))>>>0)/4294967296;};}
+
+/* ---------- idioma ---------- */
+const D={"Explore meus projetos e conheça um pouco do meu universo criativo através do pixel art.":"Explore my projects and get to know a bit of my creative universe through pixel art.","Design": "Graphic", "gráfico": "design", "Design gráfico →": "Graphic design →", "Marcas, cartazes e peças editoriais.": "Brands, posters and editorial pieces.", "Entrar →": "Enter →", "Entrar em Design gráfico": "Enter Graphic design", "Entrar em Game design e pixel art": "Enter Game design and pixel art", "Escolha uma seção": "Choose a section", "Sprites, cenários e protótipos de jogo.": "Sprites, scenery and game prototypes.", "Jogar →": "Play →", "Gabriel Hora · portfólio": "Gabriel Hora · portfolio", "← Início": "← Home", "Identidade visual, cartazes e peças editoriais. Monte um cartaz aqui embaixo e depois veja os projetos.": "Visual identity, posters and editorial pieces. Build a poster below, then browse the projects.", "Cartaz ao vivo": "Live poster", "Cartaz gerado na página": "Poster generated on the page", "Título do cartaz": "Poster title", "Paleta": "Palette", "Composição": "Layout", "Embaralhar": "Shuffle", "Passe o cursor sobre o cartaz. As camadas se movem em profundidades diferentes.": "Move the cursor over the poster. The layers shift at different depths.", "Projetos": "Projects", "exemplos": "samples", "Vamos conversar?": "Let's talk?", "Copiar": "Copy", "Copiado": "Copied", "Selecionado": "Selected", "Artista apaixonado por pixel art e criação de universos visuais. Desenvolvo personagens, cenários, tilesets e animações, explorando cores, formas e movimentos para dar vida a novas ideias e histórias, pixel por pixel.": "An artist passionate about pixel art and the creation of visual universes. I develop characters, scenery, tilesets and animations, exploring colors, shapes and movement to bring new ideas and stories to life, pixel by pixel.", "Game jam · equipe vencedora": "Game jam · winning team", "Responsável pela arte": "Art lead", "Jogar no itch.io ↗": "Play on itch.io ↗", "Capa do jogo Firefly's Path: uma criatura redonda e luminosa numa floresta escura, cercada de vaga-lumes": "Cover of Firefly's Path: a round glowing creature in a dark forest, surrounded by fireflies", "Fase interativa": "Playable level", "Jogo: use as setas ou A e D para andar, espaço para pular": "Game: use the arrow keys or A and D to walk, space to jump", "Andar para a esquerda": "Walk left", "Andar para a direita": "Walk right", "Pular": "Jump", "PULAR": "JUMP", "Reiniciar": "Restart", "Teclado: setas ou A / D para andar, espaço ou ↑ para pular.": "Keyboard: arrow keys or A / D to walk, space or ↑ to jump.", "Galeria de estudos": "Study gallery", "Filtrar por tipo": "Filter by type", "Do traço à cor": "From line to color", "Estação em pixel art, arte final com cores": "Pixel art station, finished colored artwork", "Estação em pixel art, apenas o desenho de linhas": "Pixel art station, line drawing only", "Linhas": "Line art", "Arte final": "Final art", "Comparar o desenho de linhas com a arte final": "Compare the line drawing with the final art", "Arraste para ver o desenho de linhas da estação virar arte final.": "Drag to see the station's line drawing turn into final art.", "Editor de sprite 16×16": "16×16 sprite editor", "Área de desenho 16 por 16": "16 by 16 drawing area", "Cores": "Colors", "Espelhar": "Flip", "Limpar": "Clear", "1× e 4×": "1× and 4×", "Vamos jogar juntos?": "Let's play together?", "Fechar": "Close", "← Anterior": "← Previous", "Próxima →": "Next →", "Continuar": "Continue", "Simetria: ligada": "Symmetry: on", "Simetria: desligada": "Symmetry: off", "Cor": "Color", "Borracha": "Eraser", "MOEDAS": "COINS", "FASE COMPLETA!": "LEVEL COMPLETE!", "ANDE ATÉ A PRIMEIRA MOEDA": "WALK TO THE FIRST COIN", "PROCURE A PRÓXIMA MOEDA": "FIND THE NEXT COIN", "Pera": "Pear", "Noite": "Night", "Oliva": "Olive", "Âmbar": "Amber", "Blocos": "Blocks", "Círculos": "Circles", "Ondas": "Waves", "Nº": "No.", "Capa do projeto": "Project cover", "animado": "animated", "Todos": "All", "Cenário": "Scenery", "Personagem": "Character", "Tileset": "Tileset", "Animação": "Animation", "Identidade visual · 2025": "Visual identity · 2025", "Marca, paleta e aplicações para uma cafeteria de bairro. O sistema nasceu de três círculos que se sobrepõem, como xícaras sobre uma mesa.": "Brand, palette and applications for a neighborhood coffee shop. The system grew from three overlapping circles, like cups on a table.", "Cartaz · 2025": "Poster · 2025", "Cartaz para um festival de música ao ar livre. Formas grandes, poucas cores e o título como elemento principal.": "Poster for an open-air music festival. Large shapes, few colors and the title as the main element.", "Editorial · 2024": "Editorial · 2024", "Projeto gráfico de uma revista independente: grade de colunas, hierarquia de títulos e ritmo entre texto e imagem.": "Graphic design for an independent magazine: column grid, title hierarchy and rhythm between text and image.", "Logotipo · 2024": "Logo · 2024", "Monograma para um estúdio de arquitetura. A forma simples funciona em tamanhos pequenos e em fachadas.": "Monogram for an architecture studio. The simple shape works at small sizes and on building facades.", "Embalagem · 2023": "Packaging · 2023", "Rótulos para uma linha de bebidas. Uma cor por sabor, a mesma estrutura de faixas em todos.": "Labels for a line of drinks. One color per flavor, the same stripe structure on all of them.", "Tipografia · 2023": "Typography · 2023", "Estudo de letras desenhadas a partir de formas geométricas básicas, com versões cheia e contornada.": "Study of letters drawn from basic geometric shapes, in filled and outlined versions.", "Heroína e encapuzado": "Heroine and hooded figure", "V-mon (Digimon)": "V-mon (Digimon)", "Celeiro em 5 cores": "Barn in 5 colors", "Capela na colina": "Chapel on the hill", "Criatura com broto": "Creature with a sprout", "Corvo na floresta": "Crow in the forest", "Pinheiro, neve e verão": "Pine tree, snow and summer", "Ruínas e torre d'água": "Ruins and water tower", "Tileset de esgoto": "Sewer tileset", "Criatura em destaque": "Featured creature", "Rastro azul": "Blue trail", "Respingo dourado": "Golden splash", "Estudo em movimento": "Motion study", "Dois personagens com identidades visuais distintas, apresentados lado a lado. De um lado, uma heroína de cabelos verdes e capuz marrom; do outro, uma figura misteriosa envolta em tons terrosos. O contraste entre suas aparências cria uma composição que desperta curiosidade sobre suas histórias e seus papéis nesse universo.": "Two characters with distinct visual identities, presented side by side. On one side, a heroine with green hair and a brown hood; on the other, a mysterious figure wrapped in earthy tones. The contrast between their looks creates a composition that sparks curiosity about their stories and their roles in this universe.", "Uma releitura de V-mon, personagem do universo Digimon, recriado em pixel art. O projeto explora a adaptação de suas características marcantes, como o corpo azul, os olhos vermelhos e os detalhes dourados na testa, preservando sua identidade em uma nova interpretação visual.": "A reinterpretation of V-mon, a character from the Digimon universe, recreated in pixel art. The project explores adapting its signature features, such as the blue body, red eyes and golden details on the forehead, while preserving its identity in a new visual interpretation.", "Estudo de cenário com paleta limitada a cinco cores, mostrada no topo da imagem.": "Scenery study with the palette limited to five colors, shown at the top of the image.", "Isolada no alto de uma colina, a pequena capela se destaca em meio à escuridão da noite. Cercada por vegetação e envolta em tons terrosos e sombras profundas, a cena constrói uma atmosfera misteriosa e inquietante, como se algo observasse em silêncio.": "Isolated at the top of a hill, the small chapel stands out in the darkness of the night. Surrounded by vegetation and wrapped in earthy tones and deep shadows, the scene builds a mysterious, unsettling atmosphere, as if something were watching in silence.", "Uma pequena criatura de aparência curiosa, marcada por um broto que cresce no topo de sua cabeça. Sua animação em idle traz pequenos movimentos que dão vida ao personagem, enquanto seu reflexo no chão complementa a composição.": "A small, curious-looking creature marked by a sprout growing on top of its head. Its idle animation adds small movements that bring the character to life, while its reflection on the ground completes the composition.", "Corvo em uma floresta feita de verdes e marrons terrosos.": "Crow in a forest made of earthy greens and browns.", "O mesmo pinheiro em duas versões: coberto de neve e em verdes vivos.": "The same pine tree in two versions: covered in snow and in vivid greens.", "Peças de cenário para montar: prédio, torre d'água e painéis.": "Scenery pieces to assemble: a building, a water tower and panels.", "Tileset em verde-azulado: paredes de tijolo, canos, grade de ralo e piso.": "Teal tileset: brick walls, pipes, a drain grate and floor.", "A mesma criatura em um quadro maior, para ver os detalhes do desenho.": "The same creature in a larger frame, to see the details of the drawing.", "Efeito animado em azul e branco sobre fundo escuro.": "Animated effect in blue and white on a dark background.", "Efeito animado em amarelo e laranja sobre fundo escuro.": "Animated effect in yellow and orange on a dark background.", "Estudo de animação sobre fundo escuro.": "Animation study on a dark background.", "Dois personagens em pixel art: uma heroína de cabelo verde com capuz marrom e uma figura encapuzada roxa": "Two pixel art characters: a green-haired heroine with a brown hood and a purple hooded figure", "V-mon, personagem de Digimon, recriado em pixel art, em animação": "V-mon, a Digimon character, recreated in pixel art, animated", "Celeiro em pixel art numa paleta de cinco cores, vinho e laranja": "Pixel art barn in a five-color palette, wine and orange", "Capela de pedra no alto de uma colina, à noite, em pixel art": "Stone chapel on top of a hill at night, in pixel art", "Criatura laranja com um broto na cabeça, em animação parada, com reflexo no chão": "Orange creature with a sprout on its head, in an idle animation, with a reflection on the ground", "Corvo cinza em uma floresta de verdes e marrons, em pixel art": "Gray crow in a forest of greens and browns, in pixel art", "Dois pinheiros em pixel art, um coberto de neve e outro verde": "Two pixel art pine trees, one covered in snow and one green", "Peças de cenário em pixel art: prédio, torre d'água e painéis": "Pixel art scenery pieces: a building, a water tower and panels", "Tileset de esgoto em verde-azulado, com paredes de tijolo, canos e grade de ralo": "Teal sewer tileset with brick walls, pipes and a drain grate", "Criatura laranja com um broto na cabeça, em tamanho maior": "Orange creature with a sprout on its head, in a larger size", "Efeito animado em azul e branco sobre fundo escuro": "Animated effect in blue and white on a dark background", "Efeito animado em amarelo e laranja sobre fundo escuro": "Animated effect in yellow and orange on a dark background", "Estudo de animação em pixel art sobre fundo escuro": "Pixel art animation study on a dark background"};
+Object.assign(D,{"Cartazes": "Posters", "Dois cartazes: Citréa e HORA.": "Two posters: Citréa and HORA.", "Marca fictícia · projeto autoral": "Fictional brand · personal project", "Peças para uma marca fictícia de cuidados com a pele, criada por mim.": "Pieces for a fictional skincare brand that I created.", "Trabalho atual": "Current job", "Peças criadas para a Leiloaria Smart, onde trabalho atualmente.": "Pieces created for Leiloaria Smart, where I currently work.", "Peça anterior": "Previous piece", "Próxima peça": "Next piece", "Ampliar peça": "Enlarge piece", "Curtir": "Like", "Salvar": "Save", "Ir para a peça": "Go to piece", "Cartaz Citréa: laranjas inteiras e uma cortada ao meio, com a frase \"feito para espantar qualquer tarde quente\"": "Citréa poster: whole oranges and one cut in half, with the line \"feito para espantar qualquer tarde quente\"", "Cartaz HORA: perfil de um homem sobre fundo vermelho, com a palavra HORA na vertical": "HORA poster: profile of a man on a red background, with the word HORA set vertically", "Pure Bloom: mulher com as mãos no rosto e a frase sobre transformar a pele com a força do cânhamo": "Pure Bloom: woman with her hands on her face and a line about transforming your skin with the power of hemp", "Pure Bloom: rosto de mulher sob luz dourada com a palavra NATURAL em destaque": "Pure Bloom: woman's face in golden light with the word NATURAL in large type", "Pure Bloom: retrato de mulher em luz quente com a frase \"Floreça de dentro para fora com o poder do natural\"": "Pure Bloom: portrait of a woman in warm light with the line \"Floreça de dentro para fora com o poder do natural\"", "Pure Bloom: frasco entre folhas verdes com a frase \"Sustentável, Poderoso, Natural\"": "Pure Bloom: bottle among green leaves with the line \"Sustentável, Poderoso, Natural\"", "Bloom: creme e frasco entre plantas com a frase \"Beleza começa com o que é puro\"": "Bloom: cream jar and bottle among plants with the line \"Beleza começa com o que é puro\"", "Pure Bloom: frasco verde sobre uma pedra com musgo e a frase \"Pureza que transforma\"": "Pure Bloom: green bottle on a mossy stone with the line \"Pureza que transforma\"", "Leiloaria Smart: mão segurando um celular com uma casa dentro de um carrinho de compras": "Leiloaria Smart: hand holding a phone showing a house inside a shopping cart", "Leiloaria Smart: casa moderna dentro de um arco, com a frase \"Seu próximo imóvel pode estar aqui\"": "Leiloaria Smart: modern house inside an arch, with the line \"Seu próximo imóvel pode estar aqui\"", "Leiloaria Smart: prédio alto dentro de um arco, com a frase \"Seu próximo imóvel pode estar aqui\"": "Leiloaria Smart: tall building inside an arch, with the line \"Seu próximo imóvel pode estar aqui\"", "Leiloaria Smart: prédio amarelo, olho em colagem e a pergunta \"O que você olha primeiro?\"": "Leiloaria Smart: yellow building, a collage eye and the question \"O que você olha primeiro?\"", "Leiloaria Smart: semáforo com a luz verde acesa e a pergunta sobre arrematar o primeiro imóvel": "Leiloaria Smart: traffic light with the green light on and a question about winning your first property", "Leiloaria Smart: Feirão da Inter, com um sino sob um arco sobre fundo laranja": "Leiloaria Smart: Feirão da Inter, with a bell under an arch on an orange background", "Leiloaria Smart: bola de futebol na rede e uma casa com a frase \"Compra bem em leilão\"": "Leiloaria Smart: soccer ball in the net and a house, with the line \"Compra bem em leilão\""});
+const I={lang:'pt',txt:new WeakMap()};
+function tr(k){return I.lang==='en'&&D[k]!==undefined?D[k]:k;}
+function applyStatic(){
+  const root=$('#app');
+  const w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode(n){
+    if(!n.nodeValue.trim())return NodeFilter.FILTER_REJECT;
+    const p=n.parentElement;
+    if(!p||p.closest('[data-dyn],script,style'))return NodeFilter.FILTER_REJECT;
+    return NodeFilter.FILTER_ACCEPT;
+  }});
+  const nodes=[];
+  while(w.nextNode())nodes.push(w.currentNode);
+  nodes.forEach(n=>{
+    if(!I.txt.has(n))I.txt.set(n,n.nodeValue);
+    const o=I.txt.get(n),k=o.trim();
+    n.nodeValue=(I.lang==='en'&&D[k]!==undefined)?o.replace(k,D[k]):o;
+  });
+  $$('[aria-label],[alt]',root).forEach(el=>{
+    if(el.parentElement&&el.parentElement.closest('[data-dyn]'))return;
+    ['aria-label','alt'].forEach(a=>{
+      if(!el.hasAttribute(a))return;
+      const store='data-o-'+a;
+      if(!el.hasAttribute(store))el.setAttribute(store,el.getAttribute(a));
+      const o=el.getAttribute(store);
+      el.setAttribute(a,(I.lang==='en'&&D[o]!==undefined)?D[o]:o);
+    });
+  });
+}
+function refreshDynamic(prev){
+  renderGallery();
+  $$('#g-filters button').forEach(b=>{b.textContent=tr(b.dataset.c);});
+  renderFeed();
+  $$('#pm-pal button').forEach(b=>b.setAttribute('aria-label',tr('Paleta')+' '+tr(PALS[Number(b.dataset.pi)].n)));
+  $$('#pm-lay button').forEach(b=>{b.textContent=tr(LAYOUTS[Number(b.dataset.li)]);});
+  $$('#sw button').forEach(b=>b.setAttribute('aria-label',b.dataset.col?tr('Cor')+' '+b.dataset.col:tr('Borracha')));
+  $('#ed-sym').textContent=tr('Simetria: '+(ED.sym?'ligada':'desligada'));
+  $$('.copy').forEach(b=>{b.textContent=tr('Copiar');});
+  updateHud();
+  const inp=$('#pm-text'),dflt={pt:'Forma e cor',en:'Shape and color'};
+  if(inp.value===dflt[prev]){inp.value=dflt[I.lang];pm.text=inp.value;}
+  renderPoster();
+}
+function setLang(l){
+  const prev=I.lang;
+  I.lang=l;
+  document.documentElement.lang=l==='en'?'en':'pt-BR';
+  $$('.lang button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.lang===l?'true':'false'));
+  try{localStorage.setItem('lang',l);}catch(e){}
+  closeModal();
+  applyStatic();
+  refreshDynamic(prev);
+}
+
+/* ---------- dados (troque pelos seus projetos) ---------- */
+const WORKS=[
+  {id:'herois',t:'Heroína e encapuzado',cat:'Personagem',bg:'#e9e4d4',src:'img/herois.png',alt:'Dois personagens em pixel art: uma heroína de cabelo verde com capuz marrom e uma figura encapuzada roxa',d:'Dois personagens com identidades visuais distintas, apresentados lado a lado. De um lado, uma heroína de cabelos verdes e capuz marrom; do outro, uma figura misteriosa envolta em tons terrosos. O contraste entre suas aparências cria uma composição que desperta curiosidade sobre suas histórias e seus papéis nesse universo.'},
+  {id:'azul',t:'V-mon (Digimon)',cat:'Personagem',anim:true,bg:'#e9e4d4',src:'img/criatura-azul.gif',alt:'V-mon, personagem de Digimon, recriado em pixel art, em animação',d:'Uma releitura de V-mon, personagem do universo Digimon, recriado em pixel art. O projeto explora a adaptação de suas características marcantes, como o corpo azul, os olhos vermelhos e os detalhes dourados na testa, preservando sua identidade em uma nova interpretação visual.'},
+  {id:'celeiro',t:'Celeiro em 5 cores',cat:'Cenário',src:'img/celeiro.png',alt:'Celeiro em pixel art numa paleta de cinco cores, vinho e laranja',d:'Estudo de cenário com paleta limitada a cinco cores, mostrada no topo da imagem.'},
+  {id:'capela',t:'Capela na colina',cat:'Cenário',anim:true,src:'img/capela.gif',alt:'Capela de pedra no alto de uma colina, à noite, em pixel art',d:'Isolada no alto de uma colina, a pequena capela se destaca em meio à escuridão da noite. Cercada por vegetação e envolta em tons terrosos e sombras profundas, a cena constrói uma atmosfera misteriosa e inquietante, como se algo observasse em silêncio.'},
+  {id:'criatura-idle',t:'Criatura com broto',cat:'Personagem',anim:true,src:'img/criatura-idle.gif',alt:'Criatura laranja com um broto na cabeça, em animação parada, com reflexo no chão',d:'Uma pequena criatura de aparência curiosa, marcada por um broto que cresce no topo de sua cabeça. Sua animação em idle traz pequenos movimentos que dão vida ao personagem, enquanto seu reflexo no chão complementa a composição.'},
+  {id:'corvo',t:'Corvo na floresta',cat:'Cenário',src:'img/corvo.png',alt:'Corvo cinza em uma floresta de verdes e marrons, em pixel art',d:'Corvo em uma floresta feita de verdes e marrons terrosos.'},
+  {id:'pinheiros',t:'Pinheiro, neve e verão',cat:'Cenário',src:'img/pinheiros.webp',alt:'Dois pinheiros em pixel art, um coberto de neve e outro verde',d:'O mesmo pinheiro em duas versões: coberto de neve e em verdes vivos.'},
+  {id:'ruinas',t:'Ruínas e torre d\'água',cat:'Tileset',src:'img/ruinas.webp',alt:'Peças de cenário em pixel art: prédio, torre d\'água e painéis',d:'Peças de cenário para montar: prédio, torre d\'água e painéis.'},
+  {id:'esgoto',t:'Tileset de esgoto',cat:'Tileset',src:'img/esgoto.webp',alt:'Tileset de esgoto em verde-azulado, com paredes de tijolo, canos e grade de ralo',d:'Tileset em verde-azulado: paredes de tijolo, canos, grade de ralo e piso.'},
+  {id:'criatura',t:'Criatura em destaque',cat:'Personagem',anim:true,src:'img/criatura.gif',alt:'Criatura laranja com um broto na cabeça, em tamanho maior',d:'A mesma criatura em um quadro maior, para ver os detalhes do desenho.'},
+  {id:'rastro',t:'Rastro azul',cat:'Animação',anim:true,src:'img/rastro-azul.gif',alt:'Efeito animado em azul e branco sobre fundo escuro',d:'Efeito animado em azul e branco sobre fundo escuro.'},
+  {id:'respingo',t:'Respingo dourado',cat:'Animação',anim:true,src:'img/respingo.gif',alt:'Efeito animado em amarelo e laranja sobre fundo escuro',d:'Efeito animado em amarelo e laranja sobre fundo escuro.'},
+  {id:'movimento',t:'Estudo em movimento',cat:'Animação',anim:true,src:'img/movimento.gif',alt:'Estudo de animação em pixel art sobre fundo escuro',d:'Estudo de animação sobre fundo escuro.'}
+];
+const FEATURED=['herois','azul','capela','criatura-idle'].map(id=>WORKS.find(w=>w.id===id));
+function imgNode(w){const im=document.createElement('img');im.src=w.src;im.alt=tr(w.alt);im.decoding='async';if(w.bg)im.style.background=w.bg;return im;}
+
+const FEED=[{"id": "cartazes", "title": "Citréa + HORA", "sub": "Cartazes", "cap": "Dois cartazes: Citréa e HORA.", "slides": [{"src": "img/feed/01.webp", "alt": "Cartaz Citréa: laranjas inteiras e uma cortada ao meio, com a frase \"feito para espantar qualquer tarde quente\""}, {"src": "img/feed/02.webp", "alt": "Cartaz HORA: perfil de um homem sobre fundo vermelho, com a palavra HORA na vertical"}]}, {"id": "pure-bloom", "title": "Pure Bloom", "sub": "Marca fictícia · projeto autoral", "cap": "Peças para uma marca fictícia de cuidados com a pele, criada por mim.", "slides": [{"src": "img/feed/03-v2.webp", "alt": "Pure Bloom: mulher com as mãos no rosto e a frase sobre transformar a pele com a força do cânhamo"}, {"src": "img/feed/04.webp", "alt": "Pure Bloom: rosto de mulher sob luz dourada com a palavra NATURAL em destaque"}, {"src": "img/feed/05.webp", "alt": "Pure Bloom: retrato de mulher em luz quente com a frase \"Floreça de dentro para fora com o poder do natural\""}, {"src": "img/feed/06.webp", "alt": "Pure Bloom: frasco entre folhas verdes com a frase \"Sustentável, Poderoso, Natural\""}, {"src": "img/feed/07-v2.webp", "alt": "Bloom: creme e frasco entre plantas com a frase \"Beleza começa com o que é puro\""}, {"src": "img/feed/08.webp", "alt": "Pure Bloom: frasco verde sobre uma pedra com musgo e a frase \"Pureza que transforma\""}]}, {"id": "leiloaria", "title": "Leiloaria Smart", "sub": "Trabalho atual", "cap": "Peças criadas para a Leiloaria Smart, onde trabalho atualmente.", "slides": [{"src": "img/feed/09.webp", "alt": "Leiloaria Smart: mão segurando um celular com uma casa dentro de um carrinho de compras"}, {"src": "img/feed/10.webp", "alt": "Leiloaria Smart: casa moderna dentro de um arco, com a frase \"Seu próximo imóvel pode estar aqui\""}, {"src": "img/feed/11.webp", "alt": "Leiloaria Smart: prédio alto dentro de um arco, com a frase \"Seu próximo imóvel pode estar aqui\""}, {"src": "img/feed/12.webp", "alt": "Leiloaria Smart: prédio amarelo, olho em colagem e a pergunta \"O que você olha primeiro?\""}, {"src": "img/feed/13.webp", "alt": "Leiloaria Smart: semáforo com a luz verde acesa e a pergunta sobre arrematar o primeiro imóvel"}, {"src": "img/feed/14.webp", "alt": "Leiloaria Smart: Feirão da Inter, com um sino sob um arco sobre fundo laranja"}, {"src": "img/feed/15.webp", "alt": "Leiloaria Smart: bola de futebol na rede e uma casa com a frase \"Compra bem em leilão\""}]}];
+
+/* ---------- feed de projetos ---------- */
+const ICON={
+  prev:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>',
+  next:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>',
+  heart:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.7c0 5.6-7.5 10.2-7.5 10.2z"/></svg>',
+  save:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 4h11v16.5L12 16.5l-5.5 4z"/></svg>'
+};
+const FEEDSTATE={like:{},save:{}};
+function openPiece(post,i){
+  const n=post.slides.length,sl=post.slides[i];
+  const im=document.createElement('img');im.src=sl.src;im.alt=tr(sl.alt);im.decoding='async';
+  const go=d=>openPiece(post,(i+d+n)%n);
+  openModal({theme:'dz',stack:true,media:im,meta:tr(post.sub)+' · '+(i+1)+'/'+n,title:post.title,text:tr(post.cap),nav:n>1?{prev:()=>go(-1),next:()=>go(1)}:null});
+}
+function renderFeed(){
+  const root=$('#feed');root.replaceChildren();
+  FEED.forEach(post=>{
+    const n=post.slides.length;
+    const art=document.createElement('article');art.className='post';
+    art.innerHTML='<div class="post-h"><span class="av" aria-hidden="true">GH</span><span class="who"><b>Gabriel Hora</b><span class="sub"></span></span></div>'+
+      '<div class="media"><div class="track" role="group" tabindex="0"></div>'+
+      '<button class="cb prev" type="button" hidden>'+ICON.prev+'</button><button class="cb next" type="button">'+ICON.next+'</button>'+
+      '<span class="count" aria-hidden="true"></span></div>'+
+      '<div class="post-a"><button class="ic lk" type="button">'+ICON.heart+'</button><span class="dots"></span><button class="ic sv" type="button">'+ICON.save+'</button></div>'+
+      '<p class="cap"><b>Gabriel Hora</b><span class="ct"></span></p>';
+    $('.sub',art).textContent=tr(post.sub);
+    $('.ct',art).textContent=tr(post.cap);
+    const track=$('.track',art);
+    track.setAttribute('aria-label',post.title);
+    post.slides.forEach((sl,i)=>{
+      const b=document.createElement('button');b.type='button';b.className='slide';
+      b.setAttribute('aria-label',tr('Ampliar peça')+' '+(i+1)+'/'+n);
+      const bg=document.createElement('img');bg.className='bg';bg.src=sl.src;bg.alt='';bg.setAttribute('aria-hidden','true');bg.decoding='async';
+      const fg=document.createElement('img');fg.className='fg';fg.src=sl.src;fg.alt=tr(sl.alt);fg.decoding='async';
+      if(i>0){bg.loading='lazy';fg.loading='lazy';}
+      b.appendChild(bg);b.appendChild(fg);
+      b.addEventListener('click',()=>openPiece(post,i));
+      track.appendChild(b);
+    });
+    const prev=$('.prev',art),next=$('.next',art),count=$('.count',art),dots=$('.dots',art);
+    prev.setAttribute('aria-label',tr('Peça anterior'));
+    next.setAttribute('aria-label',tr('Próxima peça'));
+    const sc=d=>track.scrollBy({left:d*track.clientWidth,behavior:reduce?'auto':'smooth'});
+    prev.addEventListener('click',()=>sc(-1));
+    next.addEventListener('click',()=>sc(1));
+    const dotBtns=[];
+    for(let i=0;i<n;i++){
+      const d=document.createElement('button');d.type='button';
+      d.setAttribute('aria-label',tr('Ir para a peça')+' '+(i+1));
+      d.addEventListener('click',()=>track.scrollTo({left:i*track.clientWidth,behavior:reduce?'auto':'smooth'}));
+      dots.appendChild(d);dotBtns.push(d);
+    }
+    function upd(){
+      const i=clamp(Math.round(track.scrollLeft/Math.max(1,track.clientWidth)),0,n-1);
+      count.textContent=(i+1)+'/'+n;
+      prev.hidden=i===0;next.hidden=i===n-1;
+      dotBtns.forEach((d,j)=>{if(j===i)d.setAttribute('aria-current','true');else d.removeAttribute('aria-current');});
+    }
+    let tick=0;
+    track.addEventListener('scroll',()=>{if(!tick)tick=requestAnimationFrame(()=>{tick=0;upd();});},{passive:true});
+    track.addEventListener('keydown',e=>{
+      if(e.key==='ArrowRight'){e.preventDefault();sc(1);}
+      if(e.key==='ArrowLeft'){e.preventDefault();sc(-1);}
+    });
+    upd();
+    const lk=$('.lk',art),sv=$('.sv',art);
+    lk.setAttribute('aria-label',tr('Curtir'));sv.setAttribute('aria-label',tr('Salvar'));
+    lk.setAttribute('aria-pressed',FEEDSTATE.like[post.id]?'true':'false');
+    sv.setAttribute('aria-pressed',FEEDSTATE.save[post.id]?'true':'false');
+    lk.addEventListener('click',()=>{FEEDSTATE.like[post.id]=!FEEDSTATE.like[post.id];lk.setAttribute('aria-pressed',FEEDSTATE.like[post.id]?'true':'false');});
+    sv.addEventListener('click',()=>{FEEDSTATE.save[post.id]=!FEEDSTATE.save[post.id];sv.setAttribute('aria-pressed',FEEDSTATE.save[post.id]?'true':'false');});
+    root.appendChild(art);
+  });
+}
+
+/* ---------- janela de projeto ---------- */
+const M={el:$('#modal'),cb:null,last:null};
+function openModal(o){
+  M.el.className='modal '+o.theme+(o.stack?' stack':'');
+  M.cb=o.onClose||null;
+  if(M.el.hidden)M.last=document.activeElement;
+  M.nav=o.nav||null;
+  $('#m-nav').hidden=!M.nav;
+  const mm=$('#m-media');
+  mm.replaceChildren();
+  if(typeof o.media==='string')mm.innerHTML=o.media;else mm.appendChild(o.media);
+  $('#m-meta').textContent=o.meta;
+  $('#m-title').textContent=o.title;
+  $('#m-body').textContent=o.text;
+  M.el.hidden=false;
+  $('#m-ok').focus();
+}
+function closeModal(){
+  if(M.el.hidden)return;
+  M.el.hidden=true;
+  const cb=M.cb;M.cb=null;
+  if(M.last&&M.last.focus&&document.contains(M.last))M.last.focus();
+  if(cb)cb();
+}
+$('#m-x').addEventListener('click',closeModal);
+$('#m-ok').addEventListener('click',closeModal);
+M.el.addEventListener('click',e=>{if(e.target===M.el)closeModal();});
+$('#m-prev').addEventListener('click',()=>{if(M.nav)M.nav.prev();});
+$('#m-next').addEventListener('click',()=>{if(M.nav)M.nav.next();});
+
+/* ---------- navegação ---------- */
+let view='home';
+function route(){
+  const h=location.hash.replace('#','');
+  view=(h==='design'||h==='pixel')?h:'home';
+  ['home','design','pixel'].forEach(v=>{
+    const el=$('#'+v);
+    el.hidden=(v!==view);
+    el.classList.remove('fade');
+    if(v===view&&!reduce){void el.offsetWidth;el.classList.add('fade');}
+  });
+  document.body.dataset.view=view;
+  window.scrollTo(0,0);
+  G.keys.l=G.keys.r=G.keys.j=0;
+}
+document.addEventListener('click',e=>{
+  const b=e.target.closest('[data-go]');
+  if(!b)return;
+  const v=b.dataset.go;
+  const next=v==='home'?'':v;
+  if(location.hash.replace('#','')===next)return;
+  location.hash=next;
+});
+window.addEventListener('hashchange',route);
+
+/* ---------- copiar e-mail ---------- */
+$$('.copy').forEach(btn=>{
+  btn.addEventListener('click',async()=>{
+    const el=$('#'+btn.dataset.mail);
+    const old=tr('Copiar');
+    try{
+      await navigator.clipboard.writeText(el.textContent);
+      btn.textContent=tr('Copiado');
+    }catch(err){
+      const r=document.createRange();r.selectNodeContents(el);
+      const s=window.getSelection();s.removeAllRanges();s.addRange(r);
+      btn.textContent=tr('Selecionado');
+    }
+    setTimeout(()=>{btn.textContent=old;},1800);
+  });
+});
+
+/* =========================================================
+   DESIGN GRÁFICO
+   ========================================================= */
+const PALS=[
+  {n:'Pera',bg:'#eadfc3',c:['#A76908','#7D7135','#C8942F','#141512'],t:'#141512'},
+  {n:'Noite',bg:'#141512',c:['#C8942F','#7D7135','#A76908','#efe6cf'],t:'#efe6cf'},
+  {n:'Oliva',bg:'#7D7135',c:['#141512','#C8942F','#eadfc3','#A76908'],t:'#141512'},
+  {n:'Âmbar',bg:'#C8942F',c:['#141512','#A76908','#7D7135','#eadfc3'],t:'#141512'}
+];
+const LAYOUTS=['Blocos','Círculos','Ondas'];
+const pm={text:'Forma e cor',pal:0,lay:0,seed:11};
+
+function renderPoster(){
+  const P=PALS[pm.pal],c=P.c;
+  const r=rng(pm.seed*97+pm.lay*13+pm.pal*5+1);
+  const L=['','',''];
+  const pick=()=>c[Math.floor(r()*c.length)];
+  if(pm.lay===0){
+    const cell=50;
+    for(let i=0;i<10;i++){
+      const w=1+Math.floor(r()*2),h=1+Math.floor(r()*2);
+      const cx=Math.floor(r()*(6-w+1)),cy=Math.floor(r()*(6-h+1));
+      const x=cx*cell,y=cy*cell,W=w*cell,H=h*cell,col=pick(),k=r();
+      let s;
+      if(k<.45)s='<rect x="'+x+'" y="'+y+'" width="'+W+'" height="'+H+'" fill="'+col+'"/>';
+      else if(k<.78)s='<circle cx="'+(x+W/2)+'" cy="'+(y+H/2)+'" r="'+(Math.min(W,H)/2)+'" fill="'+col+'"/>';
+      else s='<polygon points="'+x+','+(y+H)+' '+(x+W)+','+(y+H)+' '+(x+W/2)+','+y+'" fill="'+col+'"/>';
+      L[i%3]+=s;
+    }
+  }else if(pm.lay===1){
+    for(let i=0;i<8;i++){
+      const x=30+r()*240,y=30+r()*230,rad=24+r()*80,col=pick();
+      const s=(r()<.35)
+        ?'<circle cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="'+rad.toFixed(1)+'" fill="none" stroke="'+col+'" stroke-width="'+(6+r()*10).toFixed(1)+'"/>'
+        :'<circle cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="'+rad.toFixed(1)+'" fill="'+col+'"/>';
+      L[i%3]+=s;
+    }
+  }else{
+    for(let i=0;i<6;i++){
+      const base=40+i*48,amp=10+r()*22,freq=.02+r()*.03,ph=r()*6.28,col=c[i%c.length];
+      let d='M-20,420 L-20,'+base;
+      for(let x=-20;x<=320;x+=10)d+=' L'+x+','+(base+amp*Math.sin(x*freq+ph)).toFixed(1);
+      d+=' L320,420 Z';
+      L[i%3]+='<path d="'+d+'" fill="'+col+'"/>';
+    }
+  }
+  const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;');
+  let words=pm.text.trim().toUpperCase().split(/\s+/).filter(Boolean).slice(0,5);
+  if(!words.length)words=['…'];
+  const maxLen=Math.max.apply(null,words.map(w=>w.length));
+  const fs=Math.min(58,Math.floor(262/(maxLen*.64)));
+  let txt='';
+  words.forEach((w,i)=>{
+    const y=372-(words.length-1-i)*fs*.9;
+    txt+='<text x="18" y="'+y.toFixed(1)+'" font-family="\'Bricolage Grotesque\',Arial,sans-serif" font-weight="800" font-size="'+fs+'" letter-spacing="-2" fill="'+P.t+'" stroke="'+P.bg+'" stroke-width="7" stroke-linejoin="round" paint-order="stroke">'+esc(w)+'</text>';
+  });
+  const meta='font-family="\'DM Sans\',Arial,sans-serif" font-weight="700" font-size="9" letter-spacing="1.2" fill="'+P.t+'"';
+  $('#poster').innerHTML=
+    '<rect width="300" height="400" fill="'+P.bg+'"/>'+
+    '<g class="ly" data-d="0.3">'+L[0]+'</g>'+
+    '<g class="ly" data-d="0.7">'+L[1]+'</g>'+
+    '<g class="ly" data-d="1.2">'+L[2]+'</g>'+
+    '<text x="18" y="24" '+meta+'>30 × 40 CM</text>'+
+    '<text x="282" y="24" text-anchor="end" '+meta+'>'+tr('Nº')+' '+(10+pm.seed%90)+'</text>'+
+    txt;
+}
+(function initPoster(){
+  const palBox=$('#pm-pal'),layBox=$('#pm-lay');
+  PALS.forEach((P,i)=>{
+    const b=document.createElement('button');
+    b.type='button';b.dataset.pi=i;b.setAttribute('aria-label',tr('Paleta')+' '+tr(P.n));
+    b.setAttribute('aria-pressed',i===pm.pal?'true':'false');
+    [P.bg,P.c[0],P.c[1],P.c[2]].forEach(col=>{const s=document.createElement('span');s.style.background=col;b.appendChild(s);});
+    b.addEventListener('click',()=>{pm.pal=i;$$('button',palBox).forEach((x,j)=>x.setAttribute('aria-pressed',j===i?'true':'false'));renderPoster();});
+    palBox.appendChild(b);
+  });
+  LAYOUTS.forEach((n,i)=>{
+    const b=document.createElement('button');
+    b.type='button';b.dataset.li=i;b.textContent=tr(n);
+    b.setAttribute('aria-pressed',i===pm.lay?'true':'false');
+    b.addEventListener('click',()=>{pm.lay=i;$$('button',layBox).forEach((x,j)=>x.setAttribute('aria-pressed',j===i?'true':'false'));renderPoster();});
+    layBox.appendChild(b);
+  });
+  $('#pm-text').addEventListener('input',e=>{pm.text=e.target.value;renderPoster();});
+  $('#pm-shuffle').addEventListener('click',()=>{pm.seed=Math.floor(Math.random()*9000)+1;renderPoster();});
+  const pw=$('#pw');
+  pw.addEventListener('pointermove',e=>{
+    const b=pw.getBoundingClientRect();
+    const nx=(e.clientX-b.left)/b.width-.5,ny=(e.clientY-b.top)/b.height-.5;
+    $$('.ly',pw).forEach(g=>{const d=parseFloat(g.dataset.d);g.style.transform='translate('+(nx*d*40).toFixed(1)+'px,'+(ny*d*40).toFixed(1)+'px)';});
+  });
+  pw.addEventListener('pointerleave',()=>{$$('.ly',pw).forEach(g=>{g.style.transform='translate(0px,0px)';});});
+  renderPoster();
+})();
+
+
+/* =========================================================
+   PIXEL ART
+   ========================================================= */
+const PAL={h:'#A76908',s:'#ffd2a8',b:'#9C9140',p:'#7D7135',k:'#E0B04A',e:'#141512',y:'#E0B04A',o:'#D98A2B',w:'#ffffff',g:'#C8942F'};
+const HERO_A=['..hhhh..','.hhhhhh.','.sesses.','.ssssss.','..bbbb..','.bbbbbb.','.bbbbbb.','..pppp..','.pp..pp.','.kk..kk.'];
+const HERO_B=HERO_A.slice(0,7).concat(['..pppp..','..pppp..','..kkkk..']);
+const COIN=['..yy..','.yyyy.','yyoyyy','yyoyyy','.yyyy.','..yy..'];
+function sprite(ctx,rows,x,y,flip){
+  for(let r=0;r<rows.length;r++){
+    const row=rows[r];
+    for(let c=0;c<row.length;c++){
+      const ch=row[flip?row.length-1-c:c];
+      if(ch!=='.'){ctx.fillStyle=PAL[ch];ctx.fillRect(Math.round(x)+c,Math.round(y)+r,1,1);}
+    }
+  }
+}
+const SKY=['#141512','#1b1a12','#262215','#3a2f16','#5a4217','#85591a'];
+
+/* ----- cenas da tela inicial ----- */
+const hd={cv:$('#cv-design'),mx:.5,my:.5,tx:.5,ty:.5,shapes:[]};
+hd.ctx=hd.cv.getContext('2d');
+(function(){
+  const r=rng(7),cols=['#A76908','#7D7135','#C8942F','#d9c9a0','#ffffff'],kinds=['circle','rect','tri','arc','ring'];
+  for(let i=0;i<15;i++)hd.shapes.push({kind:kinds[i%5],x:r(),y:.05+r()*.57,s:.07+r()*.13,c:cols[i%cols.length],d:.2+r()*.8,r:r()*3,vr:(r()-.5)*.35});
+})();
+function drawHomeDesign(T){
+  const cv=hd.cv,ctx=hd.ctx,w=cv.clientWidth,h=cv.clientHeight;
+  if(!w||!h)return;
+  const dpr=Math.min(window.devicePixelRatio||1,2);
+  if(cv.width!==Math.round(w*dpr)||cv.height!==Math.round(h*dpr)){cv.width=Math.round(w*dpr);cv.height=Math.round(h*dpr);}
+  ctx.setTransform(dpr,0,0,dpr,0,0);
+  ctx.fillStyle='#eadfc3';ctx.fillRect(0,0,w,h);
+  hd.mx+=(hd.tx-hd.mx)*.08;hd.my+=(hd.ty-hd.my)*.08;
+  const u=Math.min(w,h);
+  hd.shapes.forEach(s=>{
+    const x=s.x*w+(hd.mx-.5)*110*s.d,y=s.y*h+(hd.my-.5)*110*s.d+Math.sin(T*.6+s.r)*6*s.d,r=s.s*u;
+    ctx.save();ctx.translate(x,y);ctx.rotate(s.r+T*s.vr);
+    ctx.fillStyle=s.c;ctx.strokeStyle=s.c;
+    if(s.kind==='circle'){ctx.beginPath();ctx.arc(0,0,r,0,7);ctx.fill();}
+    else if(s.kind==='rect'){ctx.fillRect(-r,-r*.7,r*2,r*1.4);}
+    else if(s.kind==='tri'){ctx.beginPath();ctx.moveTo(0,-r);ctx.lineTo(r,r);ctx.lineTo(-r,r);ctx.closePath();ctx.fill();}
+    else if(s.kind==='arc'){ctx.beginPath();ctx.arc(0,0,r,0,Math.PI);ctx.fill();}
+    else{ctx.lineWidth=r*.28;ctx.beginPath();ctx.arc(0,0,r,0,7);ctx.stroke();}
+    ctx.restore();
+  });
+}
+$('.w-design').addEventListener('pointermove',e=>{
+  const b=e.currentTarget.getBoundingClientRect();
+  hd.tx=(e.clientX-b.left)/b.width;hd.ty=(e.clientY-b.top)/b.height;
+});
+$('.w-design').addEventListener('pointerleave',()=>{hd.tx=.5;hd.ty=.5;});
+
+const hp={cv:$('#cv-pixel'),x:null,tx:.35,face:1,stars:[]};
+hp.ctx=hp.cv.getContext('2d');
+(function(){const r=rng(3);for(let i=0;i<46;i++)hp.stars.push([r(),r()]);})();
+function drawHomePixel(T,dt){
+  const cv=hp.cv,ctx=hp.ctx,W=cv.clientWidth,H=cv.clientHeight;
+  if(!W||!H)return;
+  const lw=Math.ceil(W/5),lh=Math.ceil(H/5);
+  if(cv.width!==lw||cv.height!==lh){cv.width=lw;cv.height=lh;}
+  const gy=Math.floor(lh*.62);
+  const bh=Math.ceil(gy/SKY.length);
+  SKY.forEach((c,i)=>{ctx.fillStyle=c;ctx.fillRect(0,i*bh,lw,bh+1);});
+  hp.stars.forEach((s,i)=>{
+    if(Math.sin(T*2+i*1.7)>-.4){ctx.fillStyle=(i%5)?'#efe6cf':'#E0B04A';ctx.fillRect(Math.floor(s[0]*lw),Math.floor(s[1]*gy*.62),1,1);}
+  });
+  const mx=Math.floor(lw*.78),my=Math.floor(gy*.28);
+  ctx.fillStyle='#f0d9a0';
+  for(let dy=-6;dy<=6;dy++)for(let dx=-6;dx<=6;dx++)if(dx*dx+dy*dy<=36)ctx.fillRect(mx+dx,my+dy,1,1);
+  ctx.fillStyle='#c9ae6a';ctx.fillRect(mx-2,my-2,2,2);ctx.fillRect(mx+2,my+2,1,1);
+  for(let x=0;x<lw;x++){
+    const h1=Math.max(2,Math.floor(11+8*Math.sin(x*.07+1)+5*Math.sin(x*.19)));
+    ctx.fillStyle='#3a3418';ctx.fillRect(x,gy-h1-6,1,h1+6);
+    const h2=Math.max(2,Math.floor(6+5*Math.sin(x*.11+3)+3*Math.sin(x*.3)));
+    ctx.fillStyle='#2a2713';ctx.fillRect(x,gy-h2,1,h2);
+  }
+  ctx.fillStyle='#201f17';ctx.fillRect(0,gy,lw,lh-gy);
+  ctx.fillStyle='#C8942F';ctx.fillRect(0,gy,lw,2);
+  ctx.fillStyle='#2e2c1c';
+  for(let y=gy+6,row=0;y<lh;y+=6,row++)for(let x=(row%2)*3;x<lw;x+=6)ctx.fillRect(x,y,2,1);
+  const x0=lw*.6,x1=lw*.93-8;
+  if(hp.x===null){hp.x=x1;hp.face=-1;}
+  let moving;
+  if(hp.active){
+    const dx=hp.tx*lw-4-hp.x;
+    hp.x+=clamp(dx,-70*dt,70*dt);
+    moving=Math.abs(dx)>1.5;
+    if(moving)hp.face=dx>0?1:-1;
+  }else{
+    if(hp.x<=x0)hp.face=1;else if(hp.x>=x1)hp.face=-1;
+    hp.x+=hp.face*(reduce?0:(hp.x<x0||hp.x>x1?40:16))*dt;
+    moving=!reduce;
+  }
+  const fr=moving?((Math.floor(T*8)%2)?HERO_A:HERO_B):HERO_B;
+  sprite(ctx,fr,hp.x,gy-10,hp.face<0);
+  const cy=gy-24+Math.round(Math.sin(T*3)*2);
+  sprite(ctx,COIN,Math.floor(lw*.68),cy,false);
+}
+$('.w-pixel').addEventListener('pointermove',e=>{
+  const b=e.currentTarget.getBoundingClientRect();
+  hp.tx=(e.clientX-b.left)/b.width;
+  hp.active=true;
+});
+$('.w-pixel').addEventListener('pointerleave',()=>{hp.active=false;});
+
+/* ----- fase jogável ----- */
+const G={
+  cv:$('#game'),w:160,h:90,world:520,ground:76,cam:0,
+  p:{x:16,y:66,vx:0,vy:0,on:true,face:1,t:0},
+  keys:{l:0,r:0,j:0},
+  plats:[{x:140,y:56,w:34},{x:240,y:50,w:30},{x:330,y:56,w:36},{x:420,y:48,w:40}],
+  coins:[],stars:[],done:false
+};
+G.ctx=G.cv.getContext('2d');
+(function(){const r=rng(11);for(let i=0;i<26;i++)G.stars.push([r()*160,r()*48]);})();
+function resetGame(){
+  G.p={x:16,y:G.ground-10,vx:0,vy:0,on:true,face:1,t:0};
+  G.cam=0;G.done=false;
+  G.coins=[
+    {x:92,y:G.ground-9,got:false},
+    {x:140+14,y:56-9,got:false},
+    {x:240+12,y:50-9,got:false},
+    {x:420+17,y:48-9,got:false}
+  ];
+  updateHud();
+}
+function updateHud(){
+  const n=G.coins.filter(c=>c.got).length;
+  $('#coins').textContent=tr('MOEDAS')+' '+n+'/'+G.coins.length;
+  $('#msg').textContent=tr(n===G.coins.length?'FASE COMPLETA!':(n===0?'ANDE ATÉ A PRIMEIRA MOEDA':'PROCURE A PRÓXIMA MOEDA'));
+}
+function gameStep(dt){
+  if(!M.el.hidden)return;
+  const p=G.p,k=G.keys;
+  const dir=(k.r?1:0)-(k.l?1:0);
+  p.vx=dir*55;
+  if(dir){p.face=dir;p.t+=dt;}
+  if(k.j&&p.on){p.vy=-165;p.on=false;}
+  const prevFeet=p.y+10;
+  p.vy+=420*dt;
+  p.y+=p.vy*dt;
+  p.x=clamp(p.x+p.vx*dt,0,G.world-8);
+  p.on=false;
+  const feet=p.y+10;
+  if(feet>=G.ground){p.y=G.ground-10;p.vy=0;p.on=true;}
+  else if(p.vy>=0){
+    for(let i=0;i<G.plats.length;i++){
+      const pl=G.plats[i];
+      if(p.x+7>pl.x&&p.x+1<pl.x+pl.w&&prevFeet<=pl.y+.01&&feet>=pl.y){p.y=pl.y-10;p.vy=0;p.on=true;break;}
+    }
+  }
+  G.cam=clamp(p.x-60,0,G.world-G.w);
+  for(let i=0;i<G.coins.length;i++){
+    const c=G.coins[i];
+    if(c.got)continue;
+    if(p.x<c.x+6&&p.x+8>c.x&&p.y<c.y+6&&p.y+10>c.y){
+      c.got=true;
+      updateHud();
+      G.keys.l=G.keys.r=G.keys.j=0;
+      const pr=FEATURED[i];
+      openModal({theme:'px',stack:true,media:imgNode(pr),meta:tr(pr.cat),title:tr(pr.t),text:tr(pr.d),onClose:()=>{$('#stage').focus({preventScroll:true});}});
+      break;
+    }
+  }
+}
+function gameDraw(T){
+  const c=G.ctx,cam=Math.round(G.cam),gy=G.ground;
+  for(let i=0;i<SKY.length;i++){c.fillStyle=SKY[i];c.fillRect(0,i*13,160,14);}
+  G.stars.forEach((s,i)=>{
+    if(Math.sin(T*2+i*1.9)>-.4){
+      c.fillStyle=(i%5)?'#efe6cf':'#E0B04A';
+      const x=((s[0]-cam*.05)%160+160)%160;
+      c.fillRect(Math.floor(x),Math.floor(s[1]),1,1);
+    }
+  });
+  const mx=Math.round(124-cam*.03);
+  c.fillStyle='#f0d9a0';
+  for(let dy=-6;dy<=6;dy++)for(let dx=-6;dx<=6;dx++)if(dx*dx+dy*dy<=36)c.fillRect(mx+dx,16+dy,1,1);
+  c.fillStyle='#c9ae6a';c.fillRect(mx-2,14,2,2);c.fillRect(mx+2,18,1,1);
+  for(let x=0;x<160;x++){
+    const w1=x+cam*.2,h1=Math.max(2,Math.floor(14+10*Math.sin(w1*.04)+6*Math.sin(w1*.11)));
+    c.fillStyle='#3a3418';c.fillRect(x,gy-h1-8,1,h1+8);
+    const w2=x+cam*.45,h2=Math.max(2,Math.floor(8+6*Math.sin(w2*.07+2)+3*Math.sin(w2*.23)));
+    c.fillStyle='#2a2713';c.fillRect(x,gy-h2,1,h2);
+  }
+  c.fillStyle='#201f17';c.fillRect(0,gy,160,G.h-gy);
+  c.fillStyle='#C8942F';c.fillRect(0,gy,160,2);
+  c.fillStyle='#2e2c1c';
+  for(let y=gy+5,row=0;y<G.h;y+=5,row++){
+    for(let x=-((cam%12)+12)+(row%2)*6;x<160;x+=12)c.fillRect(x,y,3,1);
+  }
+  /* bandeira no fim da fase */
+  const fx=490-cam;
+  c.fillStyle='#efe6cf';c.fillRect(fx,gy-28,1,28);
+  c.fillStyle='#A76908';
+  for(let i=0;i<6;i++)c.fillRect(fx+1,gy-28+i,6-i,1);
+  G.plats.forEach(pl=>{
+    c.fillStyle='#7D7135';c.fillRect(pl.x-cam,pl.y,pl.w,4);
+    c.fillStyle='#d8c47a';c.fillRect(pl.x-cam,pl.y,pl.w,1);
+    c.fillStyle='#5a5028';c.fillRect(pl.x-cam,pl.y+3,pl.w,1);
+  });
+  G.coins.forEach((co,i)=>{
+    if(co.got)return;
+    const bob=Math.round(Math.sin(T*3+i)*1.5);
+    sprite(c,COIN,co.x-cam,co.y+bob,false);
+    if(Math.sin(T*4+i*2)>.7){c.fillStyle='#fff';c.fillRect(Math.round(co.x-cam)+1,Math.round(co.y+bob)+1,1,1);}
+  });
+  const p=G.p;
+  const fr=!p.on?HERO_A:((G.keys.l||G.keys.r)?((Math.floor(p.t*10)%2)?HERO_A:HERO_B):HERO_B);
+  sprite(c,fr,p.x-cam,p.y,p.face<0);
+}
+
+const KEYMAP={ArrowLeft:'l',a:'l',A:'l',ArrowRight:'r',d:'r',D:'r',ArrowUp:'j',w:'j',W:'j',' ':'j'};
+function stageInView(){
+  const r=$('#stage').getBoundingClientRect();
+  return r.bottom>80&&r.top<window.innerHeight-80;
+}
+window.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){closeModal();return;}
+  if(!M.el.hidden&&M.nav){
+    if(e.key==='ArrowLeft'){e.preventDefault();M.nav.prev();return;}
+    if(e.key==='ArrowRight'){e.preventDefault();M.nav.next();return;}
+  }
+  if(view!=='pixel'||!M.el.hidden)return;
+  const t=e.target;
+  if(t&&(t.tagName==='INPUT'||t.tagName==='TEXTAREA'))return;
+  const k=KEYMAP[e.key];
+  if(!k)return;
+  if(e.key===' '&&t&&t.tagName==='BUTTON')return;
+  if(!stageInView())return;
+  G.keys[k]=1;
+  e.preventDefault();
+});
+window.addEventListener('keyup',e=>{const k=KEYMAP[e.key];if(k)G.keys[k]=0;});
+window.addEventListener('blur',()=>{G.keys.l=G.keys.r=G.keys.j=0;});
+$$('.pad [data-k]').forEach(b=>{
+  const k=b.dataset.k;
+  const on=e=>{e.preventDefault();G.keys[k]=1;};
+  const off=()=>{G.keys[k]=0;};
+  b.addEventListener('pointerdown',on);
+  b.addEventListener('pointerup',off);
+  b.addEventListener('pointerleave',off);
+  b.addEventListener('pointercancel',off);
+});
+$('#again').addEventListener('click',()=>{resetGame();$('#stage').focus({preventScroll:true});});
+
+/* ----- miniaturas e lista de projetos ----- */
+function invader(seed,col,bg){
+  const cv=document.createElement('canvas');cv.width=12;cv.height=12;
+  const x=cv.getContext('2d'),r=rng(seed);
+  x.fillStyle=bg;x.fillRect(0,0,12,12);
+  x.fillStyle=col;
+  for(let y=1;y<11;y++)for(let i=1;i<=5;i++){
+    if(r()<(i>=4?.64:.46)){x.fillRect(i,y,1,1);x.fillRect(11-i,y,1,1);}
+  }
+  x.fillStyle=bg;x.fillRect(3,4,1,1);x.fillRect(8,4,1,1);
+  return cv;
+}
+/* ----- galeria ----- */
+const CATS=['Todos','Cenário','Personagem','Tileset','Animação'];
+let gcat='Todos';
+function visibleWorks(){return WORKS.filter(w=>gcat==='Todos'||w.cat===gcat);}
+function openWork(w,list){
+  const i=list.indexOf(w);
+  const go=d=>openWork(list[(i+d+list.length)%list.length],list);
+  openModal({theme:'px',stack:true,media:imgNode(w),meta:tr(w.cat)+(w.anim?' · '+tr('animado'):''),title:tr(w.t),text:tr(w.d),nav:list.length>1?{prev:()=>go(-1),next:()=>go(1)}:null});
+}
+function renderGallery(){
+  const g=$('#gal');g.replaceChildren();
+  const list=visibleWorks();
+  list.forEach(w=>{
+    const b=document.createElement('button');b.type='button';b.className='gitem';
+    const im=document.createElement('img');im.src=w.src;im.alt=tr(w.alt);im.decoding='async';if(w.bg)im.style.background=w.bg;
+    const t=document.createElement('span');t.className='gcap';t.textContent=tr(w.t);
+    const m=document.createElement('span');m.className='gmeta';m.textContent=tr(w.cat)+(w.anim?' · '+tr('animado'):'');
+    b.appendChild(im);b.appendChild(t);b.appendChild(m);
+    b.addEventListener('click',()=>openWork(w,list));
+    g.appendChild(b);
+  });
+}
+(function initGallery(){
+  const f=$('#g-filters');
+  CATS.forEach(c=>{
+    const b=document.createElement('button');b.type='button';b.dataset.c=c;b.textContent=tr(c);
+    b.setAttribute('aria-pressed',c===gcat?'true':'false');
+    b.addEventListener('click',()=>{gcat=c;$$('button',f).forEach(x=>x.setAttribute('aria-pressed',x===b?'true':'false'));renderGallery();});
+    f.appendChild(b);
+  });
+  renderGallery();
+})();
+
+/* ----- comparador linhas / arte final ----- */
+(function initCompare(){
+  const r=$('#cmp-r'),top=$('#cmp-top'),ln=$('#cmp-line');
+  function set(){const v=Number(r.value);top.style.clipPath='inset(0 '+(100-v)+'% 0 0)';ln.style.left=v+'%';}
+  r.addEventListener('input',set);set();
+})();
+
+/* ----- vaga-lumes do Firefly Path ----- */
+const JAM={cv:$('#jam-cv'),f:[]};
+JAM.ctx=JAM.cv.getContext('2d');
+(function(){const r=rng(5);for(let i=0;i<26;i++)JAM.f.push({x:r(),y:r(),p:r()*6.28,s:.3+r()*.7,a:r()*6.28});})();
+function drawJam(T){
+  const cv=JAM.cv,c=JAM.ctx,W=cv.clientWidth,H=cv.clientHeight;
+  if(!W||!H)return;
+  const lw=Math.ceil(W/4),lh=Math.ceil(H/4);
+  if(cv.width!==lw||cv.height!==lh){cv.width=lw;cv.height=lh;}
+  c.globalAlpha=1;
+  c.fillStyle='#141512';c.fillRect(0,0,lw,lh);
+  c.fillStyle='#201f17';
+  for(let x=0;x<lw;x++){const h=3+Math.floor(3*Math.sin(x*.35)+2*Math.sin(x*.9+1));c.fillRect(x,lh-Math.max(2,h),1,Math.max(2,h));}
+  c.fillStyle='#C8942F';
+  JAM.f.forEach(f=>{
+    const x=Math.round(((f.x*lw+Math.sin(T*.5*f.s+f.p)*10)%lw+lw)%lw);
+    const y=Math.round(f.y*lh*.85+Math.cos(T*.4*f.s+f.a)*6);
+    const on=(Math.sin(T*1.4*f.s+f.p)+1)/2;
+    c.globalAlpha=.25+.75*on;c.fillRect(x,y,1,1);
+    if(on>.6){c.globalAlpha=.25*on;c.fillRect(x-1,y,3,1);c.fillRect(x,y-1,1,3);}
+  });
+  c.globalAlpha=1;
+}
+
+/* ----- editor de sprite ----- */
+const ED={px:new Array(256).fill(null),col:'#A76908',sym:true,down:false};
+const EPAL=['#ffffff','#A76908','#D98A2B','#E0B04A','#C8942F','#9C9140','#7D7135','#141512',null];
+(function initEditor(){
+  const cv=$('#ed'),ctx=cv.getContext('2d');
+  const pv1=$('#pv1').getContext('2d'),pv4=$('#pv4').getContext('2d');
+  for(let y=0;y<HERO_A.length;y++)for(let x=0;x<8;x++){
+    const ch=HERO_A[y][x];
+    if(ch!=='.')ED.px[(y+3)*16+(x+4)]=PAL[ch];
+  }
+  function redraw(){
+    ctx.clearRect(0,0,16,16);
+    for(let i=0;i<256;i++){if(ED.px[i]){ctx.fillStyle=ED.px[i];ctx.fillRect(i%16,Math.floor(i/16),1,1);}}
+    pv1.clearRect(0,0,16,16);pv1.drawImage(cv,0,0);
+    pv4.clearRect(0,0,16,16);pv4.drawImage(cv,0,0);
+  }
+  function paint(e){
+    const b=cv.getBoundingClientRect();
+    const x=Math.floor((e.clientX-b.left)/b.width*16),y=Math.floor((e.clientY-b.top)/b.height*16);
+    if(x<0||x>15||y<0||y>15)return;
+    ED.px[y*16+x]=ED.col;
+    if(ED.sym)ED.px[y*16+(15-x)]=ED.col;
+    redraw();
+  }
+  cv.addEventListener('pointerdown',e=>{ED.down=true;cv.setPointerCapture(e.pointerId);paint(e);});
+  cv.addEventListener('pointermove',e=>{if(ED.down)paint(e);});
+  cv.addEventListener('pointerup',()=>{ED.down=false;});
+  cv.addEventListener('pointercancel',()=>{ED.down=false;});
+  const sw=$('#sw');
+  EPAL.forEach(col=>{
+    const b=document.createElement('button');
+    b.type='button';
+    b.dataset.col=col||'';b.setAttribute('aria-label',col?tr('Cor')+' '+col:tr('Borracha'));
+    b.setAttribute('aria-pressed',col===ED.col?'true':'false');
+    if(col)b.style.background=col;else b.textContent='×';
+    b.addEventListener('click',()=>{ED.col=col;$$('button',sw).forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');});
+    sw.appendChild(b);
+  });
+  $('#ed-sym').addEventListener('click',e=>{ED.sym=!ED.sym;e.currentTarget.setAttribute('aria-pressed',String(ED.sym));e.currentTarget.textContent=tr('Simetria: '+(ED.sym?'ligada':'desligada'));});
+  $('#ed-flip').addEventListener('click',()=>{
+    const n=new Array(256).fill(null);
+    for(let y=0;y<16;y++)for(let x=0;x<16;x++)n[y*16+x]=ED.px[y*16+(15-x)];
+    ED.px=n;redraw();
+  });
+  $('#ed-clear').addEventListener('click',()=>{ED.px=new Array(256).fill(null);redraw();});
+  redraw();
+})();
+
+/* ---------- laço principal ---------- */
+let last=performance.now();
+function frame(now){
+  const dt=Math.min(.05,(now-last)/1000);last=now;
+  const T=reduce?0:now/1000;
+  if(!document.hidden){
+    if(view==='home'){drawHomeDesign(T);drawHomePixel(T,dt);}
+    else if(view==='pixel'){gameStep(dt);gameDraw(T);drawJam(T);}
+  }
+  requestAnimationFrame(frame);
+}
+resetGame();
+route();
+$$('.lang button').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+let first='pt';
+try{const st=localStorage.getItem('lang');if(st==='en'||st==='pt')first=st;else if(/^en/i.test(navigator.language||''))first='en';}catch(e){}
+setLang(first);
+$$('[data-to]').forEach(b=>b.addEventListener('click',()=>{const el=document.getElementById(b.dataset.to);if(el)el.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});}));
+requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
